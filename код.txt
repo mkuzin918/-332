@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+public class CourierDeliveryNoCalc {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Введите тип груза:");
+        String cargoType = scanner.nextLine();
+
+        System.out.println("Введите место доставки:");
+        String destination = scanner.nextLine();
+
+        System.out.println("Выберите тариф доставки:");
+        System.out.println("1. Быстрый (до 3 часов)");
+        System.out.println("2. Стандартный (1-2 дня)");
+        System.out.println("3. Эконом (спустя неделю)");
+        int tariff = scanner.nextInt();
+
+        switch (tariff) {
+            case 1:
+                System.out.println("Стоимость доставки: 3000 тенге");
+                break;
+            case 2:
+                System.out.println("Стоимость доставки: 999 тенге");
+                break;
+            case 3:
+                System.out.println("Стоимость доставки: бесплатно");
+                break;
+            default:
+                System.out.println("Неверный тариф");
+                break;
+        }
+
+        scanner.close();
+    }
+}
